@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, rgb(52, 65, 250), rgb(47, 60, 245));
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+  gap: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Alinea logo y form-container verticalmente */
+  align-items: center; /* Centra logo y form-container horizontalmente */
+}
+
+.logo {
+  width: 180px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px dashed #ff66cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 30px; /* Espacio entre el logo y el formulario */
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.form-container {
+  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(29, 33, 90));
+  border-radius: 25px;
+  padding: 40px;
+  width: 380px;
+  box-shadow: 0 0 20px rgba(255, 94, 98, 0.4);
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.tab {
+  flex-grow: 1; /* Distribuye el espacio entre las pestañas */
+  cursor: pointer;
+  padding: 10px;
+  color: #ffeaea;
+  font-weight: bold;
+  text-align: center; /* Centra el texto de las pestañas */
+  border: none; /* Elimina bordes innecesarios */
+  background: transparent; /* Fondo transparente */
+}
+
+.tab.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.form-group {
+  display: none;
+}
+
+.form-group.active {
+  display: block; /* Cambiado a block para que los elementos internos fluyan normalmente */
+}
+
+.form {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos del formulario verticalmente */
+  gap: 15px; /* Espacio entre los elementos del formulario (inputs y botón) */
+}
+
+.form input {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.form input::placeholder {
+  color: #f0f0f0;
+}
+
+.form button[type="submit"] {
+  background: linear-gradient(135deg, rgb(94, 118, 255), rgb(102, 150, 255));
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+  margin-top: 10px; /* Espacio adicional antes del botón */
+}
+
+.form button[type="submit"]:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, rgb(129, 34, 40), rgb(51, 71, 255));
+}
+
+.error-msg {
+  color: #ffb3b3;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center; /* Centra el mensaje de error */
+}
